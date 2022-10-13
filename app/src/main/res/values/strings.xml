@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Activity Fragment Interface</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="fragmentHead">FRAGMENT ACTIVITY</string>
+</resources>

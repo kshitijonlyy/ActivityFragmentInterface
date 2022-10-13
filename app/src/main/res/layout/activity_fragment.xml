@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FragmentActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading"
+            android:text="@string/fragmentHead"
+            android:gravity="center"
+            android:layout_margin="40dp"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnred" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnred"
+            android:text="@string/red"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/heading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btngreen"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btngreen"
+            android:text="@string/green"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            app:layout_constraintTop_toBottomOf="@id/heading"
+            app:layout_constraintStart_toEndOf="@id/btnred"
+            app:layout_constraintEnd_toStartOf="@id/btnblue"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnblue"
+            android:text="@string/blue"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            app:layout_constraintTop_toBottomOf="@id/heading"
+            app:layout_constraintStart_toEndOf="@id/btngreen"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/v_guide_50"
+            app:layout_constraintGuide_percent=".5"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.kshitij.activityfragmentinterface.FirstFragment"
+            android:layout_width="150dp"
+            android:layout_height="600dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v_guide_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnred"
+            app:layout_constraintVertical_bias="0.503" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.kshitij.activityfragmentinterface.SecondFragment"
+            app:layout_constraintTop_toBottomOf="@id/btnred"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v_guide_50"
+            android:layout_width="150dp"
+            android:layout_height="600dp"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="351dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
